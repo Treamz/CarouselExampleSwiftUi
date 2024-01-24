@@ -14,6 +14,7 @@
 		22D4F1412B5F0438009B322E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4F1402B5F0438009B322E /* HomeView.swift */; };
 		22D4F1432B5F0BAB009B322E /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4F1422B5F0BAB009B322E /* SnapCarousel.swift */; };
 		22D4F1452B5F0D9A009B322E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4F1442B5F0D9A009B322E /* Post.swift */; };
+		22D4F1602B615962009B322E /* CarouselViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D4F15F2B615962009B322E /* CarouselViewSecond.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		22D4F1402B5F0438009B322E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		22D4F1422B5F0BAB009B322E /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		22D4F1442B5F0D9A009B322E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		22D4F15F2B615962009B322E /* CarouselViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewSecond.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				22D4F1402B5F0438009B322E /* HomeView.swift */,
+				22D4F15F2B615962009B322E /* CarouselViewSecond.swift */,
 				22D4F1422B5F0BAB009B322E /* SnapCarousel.swift */,
 			);
 			path = View;
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D4F1602B615962009B322E /* CarouselViewSecond.swift in Sources */,
 				22D4F1412B5F0438009B322E /* HomeView.swift in Sources */,
 				22D4F1432B5F0BAB009B322E /* SnapCarousel.swift in Sources */,
 				22D4F1322B5F0245009B322E /* ContentView.swift in Sources */,

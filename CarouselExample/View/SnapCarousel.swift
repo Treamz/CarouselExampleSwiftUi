@@ -23,7 +23,14 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
     // Offset..
     @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
-     
+    
+    
+    @State var offsetXT : Double = 0
+    
+    @State var progressT: Double = 0
+
+    @State var indexT: Int = 0
+
 
     
     
@@ -64,13 +71,19 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
                         // Updating current index
                         
                         let offsetX = value.translation.width
+                        offsetXT = value.translation.width
+
                         
                         // convert translation into progress
                         // and round
                         // based on the progress increas/decrease currentIndex
                         let progress = -offsetX / width
                         let roundIndex = progress.rounded()
-                        
+
+
+                      
+                        progressT = progress
+
                         // setting max
                         currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
                         
@@ -81,21 +94,29 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
                         // Updating current index
                         
                         let offsetX = value.translation.width
+                        offsetXT = value.translation.width
                         
                         // convert translation into progress
                         // and round
                         // based on the progress increas/decrease currentIndex
                         let progress = -offsetX / width
-                        let roundIndex = progress.rounded()
+                        progressT = progress
                         
+                        
+                        let roundIndex = progress.rounded()
+//                        let roundIndex = offsetX < 0 ? progress.rounded() : ceil(progress)
                         // setting max
                         index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
                     })
                 
             )
         }
+        .overlay {
+            Text("HELLO \(offsetXT)\n \(progressT) \n \(currentIndex)")
+                .background(.white)
+        }
         // Animation when offset = 0
-        .animation(.easeInOut,value: offset ==  0)
+        .animation(.easeInOut,value: offset ==  0.0)
     }
 }
 
